@@ -14,9 +14,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <section className="py-16 px-6 text-center bg-gradient-to-b from-background to-muted">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-primary bg-clip-text text-transparent">
+      <section className="py-16 px-6 text-center bg-gradient-to-br from-background via-muted to-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
+        <div className="max-w-4xl mx-auto relative z-10">
+          <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-hero bg-clip-text text-transparent">
             Manual da Abordagem Matadora
           </h1>
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
@@ -36,7 +37,7 @@ const Index = () => {
             <ArrowRight className="ml-2 h-6 w-6" />
           </Button>
           
-          <p className="text-warning font-semibold text-lg">
+          <p className="text-warning font-semibold text-lg animate-gentle-pulse">
             ⚡ Oferta especial por tempo limitado!
           </p>
         </div>
@@ -50,31 +51,31 @@ const Index = () => {
           </h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div className="bg-card border border-border rounded-lg p-6 hover:shadow-glow transition-all duration-300">
+            <div className="bg-gradient-card border border-border rounded-lg p-6 hover:shadow-card transition-all duration-300 hover:scale-105">
               <div className="text-success text-2xl mb-4">✅</div>
               <h4 className="text-xl font-bold text-foreground mb-3">Script de Abordagem de Primeira Impressão</h4>
               <p className="text-muted-foreground">(As frases exatas que quebram o gelo sem parecer forçado — até com cliente desconfiado.)</p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6 hover:shadow-glow transition-all duration-300">
+            <div className="bg-gradient-card border border-border rounded-lg p-6 hover:shadow-card transition-all duration-300 hover:scale-105">
               <div className="text-success text-2xl mb-4">✅</div>
               <h4 className="text-xl font-bold text-foreground mb-3">Mapa de Conexão Rápida</h4>
               <p className="text-muted-foreground">(Aperte o botão certo na mente do cliente usando perguntas simples — sem parecer vendedor pegajoso.)</p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6 hover:shadow-glow transition-all duration-300">
+            <div className="bg-gradient-card border border-border rounded-lg p-6 hover:shadow-card transition-all duration-300 hover:scale-105">
               <div className="text-success text-2xl mb-4">✅</div>
               <h4 className="text-xl font-bold text-foreground mb-3">Sequência de Impacto em 30s</h4>
               <p className="text-muted-foreground">(O que dizer, em qual ordem, e por quê — pra não perder o cliente logo de cara.)</p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6 hover:shadow-glow transition-all duration-300">
+            <div className="bg-gradient-card border border-border rounded-lg p-6 hover:shadow-card transition-all duration-300 hover:scale-105">
               <div className="text-success text-2xl mb-4">✅</div>
               <h4 className="text-xl font-bold text-foreground mb-3">Detector de Interesse Rápido</h4>
               <p className="text-muted-foreground">(Saiba se o cliente está realmente aberto à conversa — sem parecer intrometido.)</p>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6 hover:shadow-glow transition-all duration-300">
+            <div className="bg-gradient-card border border-border rounded-lg p-6 hover:shadow-card transition-all duration-300 hover:scale-105">
               <div className="text-success text-2xl mb-4">✅</div>
               <h4 className="text-xl font-bold text-foreground mb-3">Rotina de Prática com Objeções Reais</h4>
               <p className="text-muted-foreground">(Destrave seu cérebro antes de entrar na conversa — e pare de gaguejar na frente do cliente.)</p>
@@ -96,14 +97,15 @@ const Index = () => {
       </section>
 
       {/* Problem Section */}
-      <section className="py-16 px-6 bg-muted">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-16 px-6 bg-gradient-to-br from-muted via-muted/70 to-muted relative">
+        <div className="absolute inset-0 bg-gradient-warning opacity-5"></div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
             Quer vender? Aprenda a abrir a boca sem ferrar tudo.
           </h3>
           
-          <div className="bg-card border-2 border-primary rounded-xl p-8 mb-8 shadow-intense">
-            <h4 className="text-3xl font-bold text-primary mb-6">
+          <div className="bg-gradient-card border-2 border-primary/50 rounded-xl p-8 mb-8 shadow-intense backdrop-blur-sm">
+            <h4 className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-6">
               Você só tem 30 segundos.
             </h4>
             <p className="text-xl text-foreground mb-6">
@@ -140,7 +142,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="bg-warning/20 border border-warning rounded-lg p-6 mb-8">
+          <div className="bg-gradient-warning rounded-lg p-6 mb-8 border border-warning/30">
             <p className="text-2xl font-bold text-foreground mb-4">
               Chega de começar bem e perder o cliente logo depois do "bom dia".
             </p>
