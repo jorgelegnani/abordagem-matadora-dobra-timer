@@ -107,7 +107,7 @@ const Footer = () => {
         <div className="border-t border-slate-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-slate-400 text-sm">
-              © 2024 Manual da Abordagem Matadora. Todos os direitos reservados.
+              © 2025 Manual da Abordagem Matadora. Todos os direitos reservados.
             </div>
             <div className="flex space-x-6 text-sm text-slate-400">
               <button
@@ -116,10 +116,6 @@ const Footer = () => {
               >
                 Fale Conosco
               </button>
-              <span>•</span>
-              <span>Termos de Uso</span>
-              <span>•</span>
-              <span>Política de Privacidade</span>
             </div>
           </div>
         </div>
