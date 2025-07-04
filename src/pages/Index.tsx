@@ -12,6 +12,7 @@ import ProductValueSection from '@/components/sections/ProductValueSection';
 import BonusesSection from '@/components/sections/BonusesSection';
 import FaqSection from '@/components/sections/FaqSection';
 import FinalCtaSection from '@/components/sections/FinalCtaSection';
+import PurchaseNotifications from '@/components/PurchaseNotifications';
 
 const Index = () => {
   const scrollToOffer = () => {
@@ -35,6 +36,7 @@ const Index = () => {
       <FinalCtaSection onScrollToOffer={scrollToOffer} />
       <Footer />
       <WhatsAppButton />
+      <PurchaseNotifications />
     </div>
   );
 };
