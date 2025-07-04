@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
@@ -40,10 +39,10 @@ const ProductValueSection: React.FC<ProductValueSectionProps> = ({ onScrollToOff
           variant="explosive" 
           size="lg" 
           onClick={onScrollToOffer}
-          className="text-xl py-8 px-12 shadow-xl"
+          className="text-base sm:text-xl py-6 sm:py-8 px-8 sm:px-12 shadow-xl"
         >
-          GARANTIR MINHA VAGA AGORA
-          <ArrowRight className="ml-2 h-6 w-6" />
+          GARANTIR VAGA
+          <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
         </Button>
       </div>
     </section>

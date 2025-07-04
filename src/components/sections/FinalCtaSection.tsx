@@ -38,10 +38,10 @@ const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({ onScrollToOffer }) =>
             variant="explosive" 
             size="lg" 
             onClick={onScrollToOffer}
-            className="w-full text-lg sm:text-2xl py-6 sm:py-8 mb-4 shadow-xl flex items-center justify-center"
+            className="w-full text-base sm:text-xl py-6 sm:py-8 mb-4 shadow-xl flex items-center justify-center"
           >
-            <span className="text-center leading-tight">COMEÇAR MINHA TRANSFORMAÇÃO AGORA</span>
-            <ArrowRight className="ml-2 h-6 w-6 sm:h-8 sm:w-8 flex-shrink-0" />
+            <span className="text-center leading-tight">COMEÇAR AGORA</span>
+            <ArrowRight className="ml-2 h-5 w-5 sm:h-7 sm:w-7 flex-shrink-0" />
           </Button>
           
           <p className="text-green-600 font-semibold text-sm sm:text-base">

@@ -69,10 +69,10 @@ const ProblemSection: React.FC<ProblemSectionProps> = ({ onScrollToOffer }) => {
           variant="explosive" 
           size="lg" 
           onClick={onScrollToOffer}
-          className="text-xl py-8 px-12 shadow-xl"
+          className="text-base sm:text-xl py-6 sm:py-8 px-8 sm:px-12 shadow-xl"
         >
-          RESOLVER AGORA POR R$37
-          <ArrowRight className="ml-2 h-6 w-6" />
+          RESOLVER POR R$37
+          <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
         </Button>
       </div>
     </section>

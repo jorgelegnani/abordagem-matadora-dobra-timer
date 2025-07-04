@@ -27,9 +27,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToOffer }) => {
             variant="cta" 
             size="lg" 
             onClick={onScrollToOffer}
-            className="mb-8 text-lg sm:text-xl py-6 sm:py-8 px-8 sm:px-12 shadow-xl w-full sm:w-auto max-w-md mx-auto flex items-center justify-center"
+            className="mb-8 text-base sm:text-xl py-6 sm:py-8 px-6 sm:px-12 shadow-xl w-full sm:w-auto max-w-md mx-auto flex items-center justify-center"
           >
-            <span className="text-center">QUERO APRENDER AGORA</span>
+            <span className="text-center">QUERO APRENDER</span>
             <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
           </Button>
         </div>

@@ -59,10 +59,10 @@ const PriceSection: React.FC = () => {
             variant="cta" 
             size="lg" 
             onClick={handleCtaClick}
-            className="w-full mb-4 text-xl py-8"
+            className="w-full mb-4 text-base sm:text-xl py-6 sm:py-8"
           >
-            QUERO DOMINAR A ABORDAGEM AGORA
-            <ArrowRight className="ml-2 h-6 w-6" />
+            DOMINAR ABORDAGEM
+            <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
           </Button>
 
           <p className="text-success font-semibold text-lg">
@@ -102,10 +102,10 @@ const PriceSection: React.FC = () => {
               variant="explosive" 
               size="lg" 
               onClick={handleCtaClick}
-              className="w-full text-xl py-8"
+              className="w-full text-base sm:text-xl py-6 sm:py-8"
             >
-              COMEÇAR MINHA TRANSFORMAÇÃO AGORA
-              <ArrowRight className="ml-2 h-6 w-6" />
+              COMEÇAR AGORA
+              <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
             </Button>
           </div>
         </div>
