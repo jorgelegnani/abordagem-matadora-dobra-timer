@@ -72,7 +72,7 @@ const Navigation = () => {
                   {item.label}
                 </button>)}
               <div className="px-4 pt-4 space-y-3">
-                <Button variant="outline" size="sm" onClick={handleExistingCustomerClick} className="w-full">
+                <Button variant="outline" size="sm" onClick={handleExistingCustomerClick} className="w-full bg-zinc-50">
                   Já Comprei
                 </Button>
                 <Button variant="cta" size="sm" onClick={() => scrollToSection('oferta')} className="w-full">
