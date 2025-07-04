@@ -36,6 +36,10 @@ const FaqSection: React.FC<FaqSectionProps> = ({ onScrollToOffer }) => {
       answer: "Garantia de 7 dias. Achou que não valeu cada centavo? Seu dinheiro volta sem questionamentos."
     },
     {
+      question: "Como vou receber o manual?",
+      answer: "Imediatamente após a confirmação do pagamento, você receberá um email com seus dados de acesso exclusivos para baixar todo o material. O acesso é vitalício e você pode baixar quantas vezes quiser."
+    },
+    {
       question: "O material é atualizado?",
       answer: "Sempre. Testamos as abordagens no mercado real e atualizamos conforme as mudanças no comportamento dos clientes."
     }
