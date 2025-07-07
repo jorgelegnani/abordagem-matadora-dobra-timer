@@ -13,6 +13,9 @@ import BonusesSection from '@/components/sections/BonusesSection';
 import FaqSection from '@/components/sections/FaqSection';
 import FinalCtaSection from '@/components/sections/FinalCtaSection';
 import PurchaseNotifications from '@/components/PurchaseNotifications';
+import DiscountProgressBar from '@/components/DiscountProgressBar';
+import LiveViewerCounter from '@/components/LiveViewerCounter';
+import UnlockedBenefits from '@/components/UnlockedBenefits';
 
 const Index = () => {
   const scrollToOffer = () => {
@@ -24,6 +27,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 text-slate-900">
+      <DiscountProgressBar />
       <Navigation />
       <HeroSection onScrollToOffer={scrollToOffer} />
       <FeaturesSection onScrollToOffer={scrollToOffer} />
@@ -36,6 +40,8 @@ const Index = () => {
       <FinalCtaSection onScrollToOffer={scrollToOffer} />
       <Footer />
       <WhatsAppButton />
+      <LiveViewerCounter />
+      <UnlockedBenefits />
       <PurchaseNotifications />
     </div>
   );
