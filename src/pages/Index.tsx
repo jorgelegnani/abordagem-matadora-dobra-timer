@@ -16,6 +16,7 @@ import PurchaseNotifications from '@/components/PurchaseNotifications';
 import DiscountProgressBar from '@/components/DiscountProgressBar';
 import LiveViewerCounter from '@/components/LiveViewerCounter';
 import UnlockedBenefits from '@/components/UnlockedBenefits';
+import ExitIntentPopup from '@/components/ExitIntentPopup';
 
 const Index = () => {
   const scrollToOffer = () => {
@@ -43,6 +44,7 @@ const Index = () => {
       <LiveViewerCounter />
       <UnlockedBenefits />
       <PurchaseNotifications />
+      <ExitIntentPopup />
     </div>
   );
 };
