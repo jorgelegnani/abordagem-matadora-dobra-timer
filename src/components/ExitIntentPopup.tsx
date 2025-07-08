@@ -155,7 +155,7 @@ const ExitIntentPopup: React.FC = () => {
               Esta oferta especial não estará disponível quando você voltar.
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <AlertDialogFooter>
+          <AlertDialogFooter className="flex flex-col-reverse sm:flex-row sm:justify-center sm:space-x-2">
             <AlertDialogCancel 
               onClick={handleCancelClose}
               className="bg-gradient-cta text-white hover:bg-gradient-cta/90"
