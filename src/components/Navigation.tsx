@@ -35,9 +35,9 @@ const Navigation = () => {
     label: 'Para Quem',
     id: 'para-quem'
   }];
-  return <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
+  return <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center h-16 bg-zinc-50">
+        <div className="flex justify-between items-center h-16">
           <div className="font-bold text-lg sm:text-xl text-slate-800 flex-shrink-0">
             Abordagem Matadora
           </div>
