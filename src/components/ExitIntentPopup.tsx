@@ -169,7 +169,7 @@ const ExitIntentPopup: React.FC = () => {
               Perder o Desconto
             </AlertDialogAction>
           </AlertDialogFooter>
-          <div className="text-xs text-center text-muted-foreground px-2 -mt-2">
+          <div className="text-xs text-center text-muted-foreground px-4 pb-2">
             💔 Sem essa oportunidade, você continuará enfrentando os mesmos desafios e frustrações de sempre...
           </div>
         </AlertDialogContent>
