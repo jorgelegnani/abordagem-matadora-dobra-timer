@@ -67,12 +67,10 @@ const ExitIntentPopup: React.FC = () => {
     setShowConfirmation(false);
   };
 
-  const scrollToOffer = () => {
-    const offerSection = document.getElementById('oferta');
-    if (offerSection) {
-      offerSection.scrollIntoView({ behavior: 'smooth' });
-      setShowExitIntent(false);
-    }
+  const handlePurchase = () => {
+    // TODO: Redirecionar para o checkout quando o link for fornecido
+    // window.location.href = 'LINK_DO_CHECKOUT';
+    setShowExitIntent(false);
   };
 
   return (
@@ -132,21 +130,21 @@ const ExitIntentPopup: React.FC = () => {
             </div>
 
             <Button
-              onClick={scrollToOffer}
+              onClick={handlePurchase}
               className="w-full bg-gradient-cta hover:shadow-glow text-white font-bold py-3 text-lg transition-all duration-300 hover:scale-[1.02]"
             >
-              🔥 GARANTIR DESCONTO DE R$27,00
+              🔥 COMPRAR AGORA POR R$27,00
             </Button>
 
             <div className="text-xs text-center text-muted-foreground">
-              💡 Aproveite agora: esta é uma oferta única para visitantes que estão saindo
+              💡 Aproveite agora: esta é uma oferta única
             </div>
           </div>
         </DialogContent>
       </Dialog>
 
       <AlertDialog open={showConfirmation} onOpenChange={setShowConfirmation}>
-        <AlertDialogContent className="bg-card border-destructive/20">
+        <AlertDialogContent className="bg-card border-destructive/20 max-w-sm sm:max-w-lg mx-4">
           <AlertDialogHeader>
             <AlertDialogTitle className="text-destructive">
               ⚠️ Tem certeza que quer perder este desconto?
@@ -157,19 +155,24 @@ const ExitIntentPopup: React.FC = () => {
               Esta oferta especial não estará disponível quando você voltar.
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel 
-              onClick={handleCancelClose}
-              className="bg-gradient-cta text-white hover:bg-gradient-cta/90"
-            >
-              Não! Quero o desconto
-            </AlertDialogCancel>
-            <AlertDialogAction 
-              onClick={handleConfirmClose}
-              className="bg-destructive hover:bg-destructive/90"
-            >
-              Sim, perder desconto
-            </AlertDialogAction>
+          <AlertDialogFooter className="flex-col space-y-2">
+            <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 space-y-2 space-y-reverse sm:space-y-0">
+              <AlertDialogCancel 
+                onClick={handleCancelClose}
+                className="bg-gradient-cta text-white hover:bg-gradient-cta/90"
+              >
+                Comprar Agora
+              </AlertDialogCancel>
+              <AlertDialogAction 
+                onClick={handleConfirmClose}
+                className="bg-destructive hover:bg-destructive/90"
+              >
+                Perder o Desconto
+              </AlertDialogAction>
+            </div>
+            <div className="text-xs text-center text-muted-foreground mt-3 px-2">
+              💔 Sem essa oportunidade, você continuará enfrentando os mesmos desafios e frustrações de sempre...
+            </div>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
