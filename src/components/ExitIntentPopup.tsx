@@ -155,25 +155,23 @@ const ExitIntentPopup: React.FC = () => {
               Esta oferta especial não estará disponível quando você voltar.
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <AlertDialogFooter className="flex-col space-y-2">
-            <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 space-y-2 space-y-reverse sm:space-y-0">
-              <AlertDialogCancel 
-                onClick={handleCancelClose}
-                className="bg-gradient-cta text-white hover:bg-gradient-cta/90"
-              >
-                Comprar Agora
-              </AlertDialogCancel>
-              <AlertDialogAction 
-                onClick={handleConfirmClose}
-                className="bg-destructive hover:bg-destructive/90"
-              >
-                Perder o Desconto
-              </AlertDialogAction>
-            </div>
-            <div className="text-xs text-center text-muted-foreground mt-3 px-2">
-              💔 Sem essa oportunidade, você continuará enfrentando os mesmos desafios e frustrações de sempre...
-            </div>
+          <AlertDialogFooter>
+            <AlertDialogCancel 
+              onClick={handleCancelClose}
+              className="bg-gradient-cta text-white hover:bg-gradient-cta/90"
+            >
+              Comprar Agora
+            </AlertDialogCancel>
+            <AlertDialogAction 
+              onClick={handleConfirmClose}
+              className="bg-destructive hover:bg-destructive/90"
+            >
+              Perder o Desconto
+            </AlertDialogAction>
           </AlertDialogFooter>
+          <div className="text-xs text-center text-muted-foreground px-2 -mt-2">
+            💔 Sem essa oportunidade, você continuará enfrentando os mesmos desafios e frustrações de sempre...
+          </div>
         </AlertDialogContent>
       </AlertDialog>
     </>
