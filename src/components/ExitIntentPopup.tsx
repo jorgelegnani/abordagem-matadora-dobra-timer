@@ -25,9 +25,13 @@ const ExitIntentPopup: React.FC = () => {
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
+    let inactivityTimer: NodeJS.Timeout;
+    let pageTimer: NodeJS.Timeout;
+    let lastScrollY = window.scrollY;
+    let lastActivity = Date.now();
 
+    // Desktop: detecção por mouse
     const handleMouseLeave = (e: MouseEvent) => {
-      // Detecta quando o mouse sai da viewport pelo topo
       if (e.clientY <= 0 && !hasShown) {
         timeoutId = setTimeout(() => {
           setShowExitIntent(true);
@@ -42,15 +46,69 @@ const ExitIntentPopup: React.FC = () => {
       }
     };
 
+    // Mobile: detecção por scroll up rápido
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const scrollDirection = currentScrollY < lastScrollY ? 'up' : 'down';
+      const scrollSpeed = Math.abs(currentScrollY - lastScrollY);
+      
+      // Se scroll up rápido no topo da página
+      if (scrollDirection === 'up' && scrollSpeed > 50 && currentScrollY < 100 && !hasShown) {
+        setShowExitIntent(true);
+        setHasShown(true);
+      }
+      
+      lastScrollY = currentScrollY;
+      lastActivity = Date.now();
+    };
+
+    // Detectar inatividade (mobile/desktop)
+    const resetInactivityTimer = () => {
+      lastActivity = Date.now();
+      if (inactivityTimer) {
+        clearTimeout(inactivityTimer);
+      }
+      
+      inactivityTimer = setTimeout(() => {
+        if (!hasShown && Date.now() - lastActivity > 30000) { // 30 segundos sem atividade
+          setShowExitIntent(true);
+          setHasShown(true);
+        }
+      }, 30000);
+    };
+
+    // Timer de tempo na página (45 segundos)
+    pageTimer = setTimeout(() => {
+      if (!hasShown) {
+        setShowExitIntent(true);
+        setHasShown(true);
+      }
+    }, 45000);
+
+    // Event listeners
     document.addEventListener('mouseleave', handleMouseLeave);
     document.addEventListener('mouseenter', handleMouseEnter);
+    document.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('mousemove', resetInactivityTimer);
+    document.addEventListener('touchstart', resetInactivityTimer);
+    document.addEventListener('touchmove', resetInactivityTimer);
+    document.addEventListener('scroll', resetInactivityTimer);
+
+    // Iniciar timer de inatividade
+    resetInactivityTimer();
 
     return () => {
       document.removeEventListener('mouseleave', handleMouseLeave);
       document.removeEventListener('mouseenter', handleMouseEnter);
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
+      document.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousemove', resetInactivityTimer);
+      document.removeEventListener('touchstart', resetInactivityTimer);
+      document.removeEventListener('touchmove', resetInactivityTimer);
+      document.removeEventListener('scroll', resetInactivityTimer);
+      
+      if (timeoutId) clearTimeout(timeoutId);
+      if (inactivityTimer) clearTimeout(inactivityTimer);
+      if (pageTimer) clearTimeout(pageTimer);
     };
   }, [hasShown]);
 
